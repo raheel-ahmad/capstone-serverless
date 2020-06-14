@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "1f5211ac-13ad-44c1-9373-3f9bfc9c8364",
+		"name": "Capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ADs",
+			"item": [
+				{
+					"name": "Get all user ads",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-west-2.amazonaws.com/dev/ads",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-west-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"ads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create ad",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Water flowers 2\",\n\t\"price\": 1100,\n\t\"reference_url\": \"reference_url.com\",\n\t\"email\": \"ad_owner@gmail.com\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-west-2.amazonaws.com/dev/ads",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-west-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"ads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update ad",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Spring Water flowers\",\n\t\"price\": 800,\n\t\"reference_url\": \"reference_url.com\",\n\t\"email\": \"new_ad_owner@gmail.com\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-west-2.amazonaws.com/dev/ads/cc2b0786-b302-4d7b-aa30-2c1a0002b14b",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-west-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"ads",
+								"cc2b0786-b302-4d7b-aa30-2c1a0002b14b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ad",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-west-2.amazonaws.com/dev/ads/cc2b0786-b302-4d7b-aa30-2c1a0002b14b",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-west-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"ads",
+								"cc2b0786-b302-4d7b-aa30-2c1a0002b14b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get attachment URL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-west-2.amazonaws.com/dev/ads/57743eb2-6c79-4302-9d2e-1d80958e16ef/attachment",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-west-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"ads",
+								"57743eb2-6c79-4302-9d2e-1d80958e16ef",
+								"attachment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all ads",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-west-2.amazonaws.com/dev/ads/all",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-west-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"ads",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0702d5c1-3d5a-4640-a6ea-7e8be6097c10",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "630a2c74-6eff-4cea-b581-4674cbee922b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "99f6fea0-1889-4ee9-a812-f8c1da9009a3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d38daa53-2a69-446d-91ea-483979177348",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "69b460db-cb01-4a55-a5b8-b676afef4484",
+			"key": "apiId",
+			"value": "hlumo1khn6",
+			"type": "string"
+		},
+		{
+			"id": "4e50f1fb-045b-4678-8aac-64360d02ef80",
+			"key": "authToken",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InlFT3RBeWpPdkJNeVp5QVlWaktnMSJ9.eyJpc3MiOiJodHRwczovL2Rldi0yN2lvdC15eS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWVlNGM1YTQ3NzFiMjUwYjc3MTY3NGYzIiwiYXVkIjoiZTVCd0Z3VmJqSEE3TWtTWVhsYkk4QUVpRlhKR0RiR3giLCJpYXQiOjE1OTIxMzk4MTcsImV4cCI6MTU5MjE3NTgxNywiYXRfaGFzaCI6IjlZMGtXelNKRW12cDRUbnVhT2FiLWciLCJub25jZSI6ImN-WmQteFFBZVBjN2Y2ZHk4el9OQlhUa2hZelo5LnpBIn0.pRk6K3yYivnhqA2IcmlooDwnwtiqxinp-YAY2HDmGaxChrBnJEZmIveP9I_kSJkb3_HdxzP5ZypVL__xjkSx9F5hhZah3ZEwrREq3yz_i1wNXTpOOoMR14QKtmGfz0SgIBEhoUZZZR8Q651j-MVILoLygvyllzsvJAKHWAfvMuYkZUMCRoqlXM3AnHPDfn7Vx01PrEuJilnKUPY4yOtqBCNC24i4cOI3rkA6QIIGoqfK_Z6w71xWAcek0ZHwH_-QCgjnQjZGF3O_S8LyO9Z87DFfseBRYnH1LFkEAyqK72AXOw4wddVPCtWSu3UuBYuEcc1w6NqdTlLp7SoiWiDUeg",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
